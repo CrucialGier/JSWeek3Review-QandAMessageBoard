@@ -13,8 +13,7 @@ export default Ember.Component.extend({
         question: this.get('currentQuestion')
       };
       this.set('addNewAnswer', false);
-      console.log(currentQuestion);
-      this.sendAction('newAnswer', currentQuestion, params);
+      this.sendAction('newAnswer', params);
     }
   }
 });

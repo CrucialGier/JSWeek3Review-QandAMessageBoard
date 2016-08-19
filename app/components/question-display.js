@@ -31,11 +31,10 @@ export default Ember.Component.extend({
         this.set('deleteRequest', false);
       }
     },
-    newAnswer(currentQuestion, params) {
-      console.log(currentQuestion);
+    newAnswer(params) {
       console.log(params);
       this.store.createRecord('answer', params);
-      this.sendAction('newAnswer', currentQuestion, params);
+      this.sendAction('newAnswer', params);
     }
   }
 });
