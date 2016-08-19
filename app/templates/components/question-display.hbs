@@ -38,7 +38,7 @@
         <button {{action 'delete' currentQuestion}} class='delete-confirm-button'>Submit</button>
       </form>
     {{else}}
-      <button {{action 'showDeleteConfirm'}}  class="deleteButton">&#10006;</button>
+      <button {{action 'showDeleteConfirm'}} class="deleteButton">&#10006;</button>
     {{/if}}
       <p {{action 'showDetails'}}>{{currentQuestion.question}}</p>
       <p {{action 'showDetails'}}>Written by: {{currentQuestion.author}}</p>

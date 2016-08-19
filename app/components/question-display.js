@@ -34,6 +34,7 @@ export default Ember.Component.extend({
     newAnswer(currentQuestion, params) {
       console.log(currentQuestion);
       console.log(params);
+      this.store.createRecord('answer', params);
       this.sendAction('newAnswer', currentQuestion, params);
     }
   }

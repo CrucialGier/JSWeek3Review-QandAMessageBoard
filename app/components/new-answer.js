@@ -6,10 +6,11 @@ export default Ember.Component.extend({
     answerFormShow() {
       this.set('addNewAnswer', true);
     },
-    newAnswer(currentQuestion) {
+    newAnswer() {
       var params = {
         answer: this.get('answer'),
-        author: this.get('author'),
+        author2: this.get('author'),
+        question: this.get('currentQuestion')
       };
       this.set('addNewAnswer', false);
       console.log(currentQuestion);
