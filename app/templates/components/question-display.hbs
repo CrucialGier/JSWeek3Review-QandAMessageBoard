@@ -1,16 +1,24 @@
-{{#if isSelected}}
-  <li {{action 'hideDetails'}}>{{currentQuestion.question}}</li>
-  <p>Written by: {{currentQuestion.author}}</p>
-  <p>Notes: {{currentQuestion.notes}}</p>
-  <ul>
-      <li>Answers: </li>
-    <ol>
-    {{#each currentQuestion.answers as |currentAnswer|}}
-      <li>{{currentAnswer.answer}}</li>
-      <p>Written by: {{currentAnswer.author}}</p>
-    {{/each}}
-    </ol>
-  </ul>
-{{else}}
-  <li {{action 'showDetails'}}>{{currentQuestion.question}}</li>
-{{/if}}
+
+<div class="display-card">
+  {{#if isSelected}}
+    <li {{action 'hideDetails'}}>{{currentQuestion.question}}</li>
+    <p>Written by: {{currentQuestion.author}}</p>
+    <p>Notes: {{currentQuestion.notes}}</p>
+    <ul>
+      {{#if displayAnswers}}
+        <li {{action 'hideAnswers'}}>Answers: </li>
+        <ol>
+          {{#each currentQuestion.answers as |currentAnswer|}}
+            <li>{{currentAnswer.answer}}</li>
+            <p>Written by: {{currentAnswer.author}}</p>
+          {{/each}}
+        </ol>
+      {{else}}
+        <li {{action 'showAnswers'}}>Show All {{currentQuestion.answers.length}} Answers? </li>
+      {{/if}}
+    </ul>
+  {{else}}
+    <li {{action 'showDetails'}}>{{currentQuestion.question}}</li>
+    <p {{action 'showDetails'}}>Written by: {{currentQuestion.author}}</p>
+  {{/if}}
+</div>
