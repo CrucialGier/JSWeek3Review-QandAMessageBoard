@@ -3,6 +3,7 @@ import Ember from 'ember';
 export default Ember.Component.extend({
   isSelected: false,
   displayAnswers: false,
+  deleteRequest: false,
   actions: {
     showDetails: function(){
       this.set('isSelected', true);
@@ -16,9 +17,18 @@ export default Ember.Component.extend({
     hideAnswers: function(){
       this.set('displayAnswers', false);
     },
+    showDeleteConfirm: function(){
+      this.set('deleteRequest', true);
+    },
+    hideDeleteConfirm: function(){
+      this.set('deleteRequest', false);
+    },
     delete(question) {
-      if (confirm('Are you sure you want to delete this question?')) {
+      if (this.get('confirmDelete') === 'Y' || this.get('confirmDelete') === 'y' || this.get('confirmDelete') === 'yes' || this.get('confirmDelete') === 'Yes') {
         this.sendAction('destroyQuestion', question);
+        this.set('deleteRequest', false);
+      } else {
+        this.set('deleteRequest', false);
       }
     }
   }

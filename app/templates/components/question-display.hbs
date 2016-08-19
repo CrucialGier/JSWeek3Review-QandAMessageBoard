@@ -1,24 +1,47 @@
 
 <div class="display-card">
-  {{#if isSelected}}
-    <li {{action 'hideDetails'}}><button {{action 'delete' currentQuestion}}>X</button> {{currentQuestion.question}}</li>
-    <p {{action 'hideDetails'}}>Written by: {{currentQuestion.author}}</p>
-    <p>Notes: {{currentQuestion.notes}}</p>
-    <ul>
-      {{#if displayAnswers}}
-        <li {{action 'hideAnswers'}}>Answers: </li>
-        <ol>
-          {{#each currentQuestion.answers as |currentAnswer|}}
-            <li>{{currentAnswer.answer}}</li>
-            <p>Written by: {{currentAnswer.author}}</p>
-          {{/each}}
-        </ol>
+  <div class="display-content">
+    {{#if isSelected}}
+
+      {{#if deleteRequest}}
+        <button {{action 'hideDeleteConfirm'}}  class="deleteButton">&#10006;</button>
+        <form class="delete-form">
+          <label for="confirmDelete">Confirm delete Y/N</label>
+          {{input value=confirmDelete id="confirmDelete" class="confirm-input"}}
+          <button {{action 'delete' currentQuestion}} class='delete-confirm-button'>Submit</button>
+        </form>
       {{else}}
-        <li {{action 'showAnswers'}}>Show All {{currentQuestion.answers.length}} Answers? </li>
+        <button {{action 'showDeleteConfirm'}}  class="deleteButton">&#10006;</button>
       {{/if}}
-    </ul>
-  {{else}}
-    <li {{action 'showDetails'}}><button {{action 'delete' currentQuestion}}>X</button> {{currentQuestion.question}}</li>
-    <p {{action 'showDetails'}}>Written by: {{currentQuestion.author}}</p>
-  {{/if}}
+      <p {{action 'hideDetails'}}> {{currentQuestion.question}}</p>
+      <p {{action 'hideDetails'}}>Written by: {{currentQuestion.author}}</p>
+      <p>Notes: {{currentQuestion.notes}}</p>
+      <ul>
+        {{#if displayAnswers}}
+          <li {{action 'hideAnswers'}}>Answers: </li>
+          <ol>
+            {{#each currentQuestion.answers as |currentAnswer|}}
+              <li>{{currentAnswer.answer}}</li>
+              <p>Written by: {{currentAnswer.author}}</p>
+            {{/each}}
+          </ol>
+        {{else}}
+          <li {{action 'showAnswers'}}>Show All {{currentQuestion.answers.length}} Answers? </li>
+        {{/if}}
+      </ul>
+    {{else}}
+    {{#if deleteRequest}}
+      <button {{action 'hideDeleteConfirm'}}  class="deleteButton">&#10006;</button>
+      <form class="delete-form">
+        <label for="confirmDelete">Confirm delete Y/N</label>
+        {{input value=confirmDelete id="confirmDelete" class="confirm-input"}}
+        <button {{action 'delete' currentQuestion}} class='delete-confirm-button'>Submit</button>
+      </form>
+    {{else}}
+      <button {{action 'showDeleteConfirm'}}  class="deleteButton">&#10006;</button>
+    {{/if}}
+      <p {{action 'showDetails'}}>{{currentQuestion.question}}</p>
+      <p {{action 'showDetails'}}>Written by: {{currentQuestion.author}}</p>
+    {{/if}}
+  </div>
 </div>
