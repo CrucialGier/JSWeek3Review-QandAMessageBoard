@@ -6,6 +6,12 @@ module.exports = function(environment) {
     environment: environment,
     rootURL: '/',
     locationType: 'auto',
+    firebase: {
+      apiKey: "AIzaSyDeUjwUClaJXwGPr4wzWpkMzPfDKqGf-BA",
+      authDomain: "qanda-messageboard.firebaseapp.com",
+      databaseURL: "https://qanda-messageboard.firebaseio.com",
+      storageBucket: "qanda-messageboard.appspot.com",
+    },
     EmberENV: {
       FEATURES: {
         // Here you can enable experimental features on an ember canary build

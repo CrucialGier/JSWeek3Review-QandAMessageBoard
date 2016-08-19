@@ -1,1 +1,6 @@
-{{outlet}}
+
+<ul>
+  {{#each model as |currentQuestion|}}
+    {{question-display currentQuestion=currentQuestion}}
+  {{/each}}
+</ul>
