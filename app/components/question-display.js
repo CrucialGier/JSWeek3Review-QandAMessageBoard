@@ -30,6 +30,11 @@ export default Ember.Component.extend({
       } else {
         this.set('deleteRequest', false);
       }
+    },
+    newAnswer(currentQuestion, params) {
+      console.log(currentQuestion);
+      console.log(params);
+      this.sendAction('newAnswer', currentQuestion, params);
     }
   }
 });

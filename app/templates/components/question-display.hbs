@@ -2,7 +2,6 @@
 <div class="display-card">
   <div class="display-content">
     {{#if isSelected}}
-
       {{#if deleteRequest}}
         <button {{action 'hideDeleteConfirm'}}  class="deleteButton">&#10006;</button>
         <form class="delete-form">
@@ -25,6 +24,7 @@
               <p>Written by: {{currentAnswer.author}}</p>
             {{/each}}
           </ol>
+          {{new-answer currentQuestion=currentQuestion newAnswer='newAnswer'}}
         {{else}}
           <li {{action 'showAnswers'}}>Show All {{currentQuestion.answers.length}} Answers? </li>
         {{/if}}
