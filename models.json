@@ -1,0 +1,31 @@
+{
+  "questions": [
+    {
+      "question": "Am i making it harder for myself by having the answeres nested?",
+      "author": "Yours truely",
+      "notes": "I miss Angular2",
+      "answers": [
+        {
+          "answer": "Probably... it was a good idea i think though.",
+          "author": "Talking to myself"
+        }, {
+          "answer": "Worst case scenario you redo this page and split em up.",
+          "author": "Hellooo =| "
+        }
+      ]
+    }, {
+      "question": "You think ill get this working as intended?",
+      "author": "Me again",
+      "notes": "Optimistic",
+      "answers": [
+        {
+          "answer": "You usually do, but for some reason ember seems so rigid.",
+          "author": "Me as well"
+        }, {
+          "answer": "New languages always seem rigid till you get used to them.",
+          "author": "Arguing with yourself is pretty common I think."
+        }
+      ]
+    }
+  ]
+}
