@@ -1,8 +1,8 @@
 
 <div class="display-card">
   {{#if isSelected}}
-    <li {{action 'hideDetails'}}>{{currentQuestion.question}}</li>
-    <p>Written by: {{currentQuestion.author}}</p>
+    <li {{action 'hideDetails'}}><button {{action 'delete' currentQuestion}}>X</button> {{currentQuestion.question}}</li>
+    <p {{action 'hideDetails'}}>Written by: {{currentQuestion.author}}</p>
     <p>Notes: {{currentQuestion.notes}}</p>
     <ul>
       {{#if displayAnswers}}
@@ -18,7 +18,7 @@
       {{/if}}
     </ul>
   {{else}}
-    <li {{action 'showDetails'}}>{{currentQuestion.question}}</li>
+    <li {{action 'showDetails'}}><button {{action 'delete' currentQuestion}}>X</button> {{currentQuestion.question}}</li>
     <p {{action 'showDetails'}}>Written by: {{currentQuestion.author}}</p>
   {{/if}}
 </div>

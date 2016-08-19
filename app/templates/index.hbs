@@ -1,6 +1,6 @@
-
+{{new-question save2='save3'}}
 <ul>
   {{#each model as |currentQuestion|}}
-    {{question-display currentQuestion=currentQuestion}}
+    {{question-display currentQuestion=currentQuestion destroyQuestion='destroyQuestion'}}
   {{/each}}
 </ul>
