@@ -26,7 +26,7 @@
           </ol>
           {{new-answer currentQuestion=currentQuestion newAnswer="newAnswer"}}
         {{else}}
-          <li {{action 'showAnswers'}}>Show All Answers? </li>
+          <li {{action 'showAnswers'}}>Show All {{currentQuestion.answers.length}} Answers? </li>
         {{/if}}
       </ul>
     {{else}}
