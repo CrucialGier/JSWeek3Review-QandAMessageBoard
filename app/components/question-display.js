@@ -33,7 +33,6 @@ export default Ember.Component.extend({
     },
     newAnswer(params) {
       console.log(params);
-      this.store.createRecord('answer', params);
       this.sendAction('newAnswer', params);
     }
   }

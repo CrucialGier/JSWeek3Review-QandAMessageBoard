@@ -24,7 +24,7 @@
               <p>Written by: {{currentAnswer.author}}</p>
             {{/each}}
           </ol>
-          {{new-answer currentQuestion=currentQuestion newAnswer='newAnswer'}}
+          {{new-answer currentQuestion=currentQuestion newAnswer="newAnswer"}}
         {{else}}
           <li {{action 'showAnswers'}}>Show All Answers? </li>
         {{/if}}

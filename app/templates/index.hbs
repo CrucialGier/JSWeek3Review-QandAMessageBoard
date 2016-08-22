@@ -1,4 +1,5 @@
 {{new-question save2='save3'}}
+{{log model.questions}}
 {{#each model.questions as |currentQuestion|}}
   {{question-display currentQuestion=currentQuestion destroyQuestion='destroyQuestion'  newAnswer='newAnswer'}}
 {{/each}}
