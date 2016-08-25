@@ -14,7 +14,7 @@
       {{/if}}
       <p {{action 'hideDetails'}}> {{currentQuestion.question}}</p>
       <p {{action 'hideDetails'}}>Written by: {{currentQuestion.author}}</p>
-      <p>Notes: {{currentQuestion.notes}}</p>
+      <p {{action 'hideDetails'}}>Notes: {{currentQuestion.notes}}</p>
       <ul>
         {{#if displayAnswers}}
           <li {{action 'hideAnswers'}}>Answers: </li>

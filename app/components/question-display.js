@@ -26,10 +26,9 @@ export default Ember.Component.extend({
     delete(question) {
       if (this.get('confirmDelete') === 'Y' || this.get('confirmDelete') === 'y' || this.get('confirmDelete') === 'yes' || this.get('confirmDelete') === 'Yes') {
         this.sendAction('destroyQuestion', question);
-        this.set('deleteRequest', false);
-      } else {
-        this.set('deleteRequest', false);
       }
+      this.set('confirmDelete', "");
+      this.set('deleteRequest', false);
     },
     newAnswer(params) {
       console.log(params);
