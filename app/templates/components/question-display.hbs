@@ -20,7 +20,7 @@
           <li {{action 'hideAnswers'}}>Answers: </li>
           <ol>
             {{#each sortedAnswers as |currentAnswer|}}
-              <li>{{currentAnswer.answer}}</li>
+              <li>{{helpful currentAnswer}} {{currentAnswer.answer}}</li>
               <p>Written by: {{currentAnswer.author2}}</p>
               <div class="answerVoteBox">
                 <p>Was this answer helpful?<span {{action 'upVote' currentAnswer}} class="glyphicon glyphicon-thumbs-up thumbVoteButtons"></span> {{currentAnswer.upVotes}}<span {{action 'downVote' currentAnswer}} class="glyphicon glyphicon-thumbs-down thumbVoteButtons"></span> {{currentAnswer.downVotes}}</p>
