@@ -4,6 +4,8 @@ export default Ember.Component.extend({
   isSelected: false,
   displayAnswers: false,
   deleteRequest: false,
+  sortUpVotes: ['upVotes:desc'],
+  sortedAnswers: Ember.computed.sort('currentQuestion.answers', 'sortUpVotes'),
   actions: {
     showDetails: function(){
       this.set('isSelected', true);

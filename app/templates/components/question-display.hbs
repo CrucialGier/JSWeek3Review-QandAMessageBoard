@@ -19,7 +19,7 @@
         {{#if displayAnswers}}
           <li {{action 'hideAnswers'}}>Answers: </li>
           <ol>
-            {{#each currentQuestion.answers as |currentAnswer|}}
+            {{#each sortedAnswers as |currentAnswer|}}
               <li>{{currentAnswer.answer}}</li>
               <p>Written by: {{currentAnswer.author2}}</p>
               <div class="answerVoteBox">
