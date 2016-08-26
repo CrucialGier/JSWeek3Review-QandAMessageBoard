@@ -18,12 +18,14 @@
       <ul>
         {{#if displayAnswers}}
           <li class="clickable" {{action 'hideAnswers'}}>Answers: </li>
+          <h4>click an answer to add it to your notes</h4>
           <ol>
             {{#each sortedAnswers as |currentAnswer|}}
-              <li>{{helpful currentAnswer}} {{currentAnswer.answer}}</li>
-              <p>Written by: {{currentAnswer.author2}}</p>
+              <li class="clickable" {{action 'addToNotePad' currentAnswer}}>{{helpful currentAnswer}} {{currentAnswer.answer}}</li>
+              <p {{action 'addToNotePad' currentAnswer}}>Written by: {{currentAnswer.author2}}</p>
               <div class="answerVoteBox">
                 <p>Was this answer helpful?<span {{action 'upVote' currentAnswer}} class="glyphicon glyphicon-thumbs-up thumbVoteButtons"></span> {{currentAnswer.upVotes}}<span {{action 'downVote' currentAnswer}} class="glyphicon glyphicon-thumbs-down thumbVoteButtons"></span> {{currentAnswer.downVotes}}</p>
+                <hr>
               </div>
             {{/each}}
           </ol>

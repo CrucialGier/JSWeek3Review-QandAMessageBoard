@@ -4,6 +4,7 @@ export default Ember.Component.extend({
   notePad: Ember.inject.service('note-pad'),
   isSelected: false,
   displayAnswers: false,
+  answerSelected: false,
   deleteRequest: false,
   sortUpVotes: ['upVotes:desc'],
   sortedAnswers: Ember.computed.sort('currentQuestion.answers', 'sortUpVotes'),
@@ -19,6 +20,12 @@ export default Ember.Component.extend({
     },
     hideAnswers: function(){
       this.set('displayAnswers', false);
+    },
+    selectAnswer: function(){
+      this.set('answerSelected', true);
+    },
+    deselectAnswer: function(){
+      this.set('answerSelected', false);
     },
     showDeleteConfirm: function(){
       this.set('deleteRequest', true);

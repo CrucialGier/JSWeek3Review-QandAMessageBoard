@@ -1,8 +1,9 @@
 <div class="notePadDisplay">
-  <h2>Important Notes: </h2>
+  <span {{action 'emptyNotePad'}} class="glyphicon glyphicon-trash trashButton"></span><h2> Important Notes: </h2>
   <ul>
     {{#each notePad.notes as |note|}}
-      <li>{{note.answer}} -- {{note.author2}}</li>
+      <li>{{note.author2}} -- {{note.answer}}</li>
+      <hr>
     {{/each}}
   </ul>
 </div>
