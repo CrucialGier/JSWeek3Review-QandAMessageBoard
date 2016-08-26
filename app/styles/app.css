@@ -1,5 +1,28 @@
-{
-  -webkit-filter: invert(100%);
+
+  /*-webkit-filter: invert(100%);*/
+
+.applicationBox {
+  display: flex;
+}
+
+.notePad {
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  margin-left: 3%;
+  border: solid 2px black;
+  border-radius: 5px;
+  margin-top: 100px;
+}
+
+.notePadDisplay {
+  padding-left: 20px;
+}
+
+.qandaBoard {
+  display: flex;
+  flex-direction: column;
+  width: 55%;
 }
 
 .invertButton {
@@ -10,7 +33,6 @@
 .display-card {
   background-color: white;
   font-size: 22px;
-  width: 60%;
   margin-top: 20px;
   margin-left: 20px;
   border: solid 2px black;

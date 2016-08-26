@@ -1,6 +1,7 @@
 import Ember from 'ember';
 
 export default Ember.Component.extend({
+  notePad: Ember.inject.service('note-pad'),
   isSelected: false,
   displayAnswers: false,
   deleteRequest: false,
@@ -45,6 +46,9 @@ export default Ember.Component.extend({
       var currentDownVotes = answer.get('downVotes');
       answer.set('downVotes', currentDownVotes + 1);
       answer.save();
+    },
+    addToNotePad(answer) {
+      this.get('notePad').add(answer);
     }
   }
 });

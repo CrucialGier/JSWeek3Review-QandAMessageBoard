@@ -17,7 +17,7 @@
       <p {{action 'hideDetails'}}>Notes: {{currentQuestion.notes}}</p>
       <ul>
         {{#if displayAnswers}}
-          <li {{action 'hideAnswers'}}>Answers: </li>
+          <li class="clickable" {{action 'hideAnswers'}}>Answers: </li>
           <ol>
             {{#each sortedAnswers as |currentAnswer|}}
               <li>{{helpful currentAnswer}} {{currentAnswer.answer}}</li>

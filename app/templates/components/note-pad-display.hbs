@@ -1,0 +1,8 @@
+<div class="notePadDisplay">
+  <h2>Important Notes: </h2>
+  <ul>
+    {{#each notePad.notes as |note|}}
+      <li>{{note.answer}} -- {{note.author2}}</li>
+    {{/each}}
+  </ul>
+</div>
