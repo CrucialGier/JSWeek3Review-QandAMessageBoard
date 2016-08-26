@@ -52,3 +52,42 @@
   background-color: black;
   color: white;
 }
+
+.editQuestionForm {
+  border: solid 2px black;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.editQuestionForm form {
+  padding: 20px;
+}
+
+.editQuestionForm label {
+  font-weight: normal;
+  color: violet;
+}
+
+.editQuestionForm button {
+  border: solid 1px purple;
+  color: white;
+  background-color: purple;
+  border-radius: 25px;
+  width: 90px;
+}
+
+.editQuestionForm button:hover {
+  background-color: violet;
+  border: solid 1px violet;
+  color: black;
+}
+
+.stopEditingNotice {
+  font-size: 16px;
+  margin-top: 10px;
+}
+
+.stopEditinNotice:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}

@@ -1,20 +1,25 @@
 {{#if isBeingEdited}}
-<form>
-  <h4>Edit Properties of Question by {{currentQuestion.author}}</h4>
-  <div class="form-group">
-    <label for="questionEdit">Edit Question</label>
-    <input value=currentQuestion.question id="questionEdit">
+  <div class="editQuestionForm">
+    <form>
+      <p {{action 'hideQuestionEdit'}}>Edit Properties of Question by {{currentQuestion.author}}</p>
+      <div class="form-group">
+        <label for="questionEdit">Edit Question: </label>
+        {{input value=currentQuestion.question id="questionEdit"}}
+      </div>
+      <div class="form-group">
+        <label for="author">Edit Author: </label>
+        {{input value=currentQuestion.author id="author"}}
+      </div>
+      <div class="form-group">
+        <label for="notes">Edit Notes: </label>
+        {{input value=currentQuestion.notes id="notes"}}
+      </div>
+      <button {{action 'update' currentQuestion}}>Save</button>
+      <p {{action 'hideQuestionEdit'}} class="stopEditinNotice">Stop Editing</p>
+    </form>
   </div>
-  <div class="form-group">
-    <label for="author">Edit Author</label>
-    <input value=currentQuestion.author id="author">
-  </div>
-  <div class="form-group">
-    <label for="notes">Edit Notes</label>
-    <input value=currentQuestion.notes id="notes">
-  </div>
-  <button {{action 'update' currentQuestion}}>Save</button>
-</form>
 {{else}}
-  <p {{action 'showQuestionEdit'}}>Edit Question</p>
+  <div>
+    <p {{action 'showQuestionEdit'}}>Edit Question</p>
+  </div>
 {{/if}}

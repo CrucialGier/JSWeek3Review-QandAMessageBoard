@@ -12,6 +12,7 @@
       {{else}}
         <button {{action 'showDeleteConfirm'}}  class="deleteButton">&#10006;</button>
       {{/if}}
+      {{edit-question currentQuestion=currentQuestion}}
       <p {{action 'hideDetails'}}> {{currentQuestion.question}}</p>
       <p {{action 'hideDetails'}}>Written by: {{currentQuestion.author}}</p>
       <p {{action 'hideDetails'}}>Notes: {{currentQuestion.notes}}</p>
@@ -26,7 +27,7 @@
           </ol>
           {{new-answer currentQuestion=currentQuestion newAnswer="newAnswer"}}
         {{else}}
-          <li {{action 'showAnswers'}}>Show All {{currentQuestion.answers.length}} Answers? </li>
+          <li class="clickable" {{action 'showAnswers'}}>Show All {{currentQuestion.answers.length}} Answers? </li>
         {{/if}}
       </ul>
     {{else}}
@@ -40,6 +41,7 @@
     {{else}}
       <button {{action 'showDeleteConfirm'}} class="deleteButton">&#10006;</button>
     {{/if}}
+    {{edit-question currentQuestion=currentQuestion}}
       <p {{action 'showDetails'}}>{{currentQuestion.question}}</p>
       <p {{action 'showDetails'}}>Written by: {{currentQuestion.author}}</p>
     {{/if}}

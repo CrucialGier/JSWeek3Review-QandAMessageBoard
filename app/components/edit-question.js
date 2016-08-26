@@ -6,6 +6,9 @@ export default Ember.Component.extend({
     showQuestionEdit() {
       this.set('isBeingEdited', true);
     },
+    hideQuestionEdit() {
+      this.set('isBeingEdited', false);
+    },
     update(question) {
       question.save();
       this.set('isBeingEdited', false);
