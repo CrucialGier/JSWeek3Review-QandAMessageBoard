@@ -2,7 +2,7 @@
   <span {{action 'emptyNotePad'}} class="glyphicon glyphicon-trash trashButton"></span><h2> Important Notes: </h2>
   <ul>
     {{#each notePad.notes as |note|}}
-      <li>{{note.author2}} -- {{note.answer}}</li>
+      <li>{{note.author2}} -> {{note.answer}}</li>
       <hr>
     {{/each}}
   </ul>

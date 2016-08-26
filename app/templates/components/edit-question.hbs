@@ -1,7 +1,7 @@
 {{#if isBeingEdited}}
   <div class="editQuestionForm">
     <form>
-      <p {{action 'hideQuestionEdit'}}>Edit Properties of Question by {{currentQuestion.author}}</p>
+      <p class="clickable" {{action 'hideQuestionEdit'}}>Edit Properties of Question by {{currentQuestion.author}}</p>
       <div class="form-group">
         <label for="questionEdit">Edit Question: </label>
         {{input value=currentQuestion.question id="questionEdit"}}
@@ -15,7 +15,7 @@
         {{input value=currentQuestion.notes id="notes"}}
       </div>
       <button {{action 'update' currentQuestion}}>Save</button>
-      <p {{action 'hideQuestionEdit'}} class="stopEditinNotice">Stop Editing</p>
+      <p {{action 'hideQuestionEdit'}} class="stopEditingNotice">Stop Editing</p>
     </form>
   </div>
 {{else}}
