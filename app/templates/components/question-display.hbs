@@ -22,7 +22,7 @@
           <ol>
             {{#each currentQuestion.answers as |currentAnswer|}}
               <li>{{currentAnswer.answer}}</li>
-              <p>Written by: {{currentAnswer.author}}</p>
+              <p>Written by: {{currentAnswer.author2}}</p>
             {{/each}}
           </ol>
           {{new-answer currentQuestion=currentQuestion newAnswer="newAnswer"}}

@@ -91,3 +91,8 @@
   cursor: pointer;
   text-decoration: underline;
 }
+
+.clickable:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}

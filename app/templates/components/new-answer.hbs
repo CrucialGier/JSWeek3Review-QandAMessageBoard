@@ -1,15 +1,13 @@
 {{#if addNewAnswer}}
   <form>
     <div class="form-group">
-      <label for="author">Author: </label>
-      {{input value=author id="author"}}
-    </div>
-
-    <div class="form-group">
       <label for="answer">Answer: </label>
       {{input value=answer id="answer"}}
     </div>
-
+    <div class="form-group">
+      <label for="author2">Author: </label>
+      {{input value=author2 id="author2"}}
+    </div>
     <button {{action 'newAnswer'}}>Submit</button>
   </form>
 {{else}}
