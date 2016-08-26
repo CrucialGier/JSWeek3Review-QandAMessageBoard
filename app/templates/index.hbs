@@ -1,10 +1,6 @@
 <div class="applicationBox">
   <div class="qandaBoard">
-    {{#if isInverted}}
-      <img {{action 'dayMode'}} class="invertButton" src="img/closed-eye.png">
-    {{else}}
-      <img {{action 'nightMode'}} class="invertButton" src="img/open-eye.png">
-    {{/if}}
+    {{night-mode}}
     {{new-question save2='save3'}}
     {{#each model.questions as |currentQuestion|}}
       {{question-display currentQuestion=currentQuestion destroyQuestion='destroyQuestion'  newAnswer='newAnswer'}}

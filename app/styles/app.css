@@ -1,5 +1,8 @@
+.inverted {
+  -webkit-filter: invert(100%);
+  background-color: black;
+}
 
-  /*-webkit-filter: invert(100%);*/
 hr {
   border-top: solid 1px black;
   width: 95%;
