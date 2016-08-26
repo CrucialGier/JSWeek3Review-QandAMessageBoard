@@ -1,4 +1,14 @@
+{
+  -webkit-filter: invert(100%);
+}
+
+.invertButton {
+  width: 50px;
+  margin-left: 20px;
+}
+
 .display-card {
+  background-color: white;
   font-size: 22px;
   width: 60%;
   margin-top: 20px;
@@ -95,4 +105,11 @@
 .clickable:hover {
   cursor: pointer;
   text-decoration: underline;
+}
+
+.thumbVoteButtons {
+  padding: 3px;
+  margin-left: 14px;
+  border: solid 2px black;
+  border-radius: 5px;
 }

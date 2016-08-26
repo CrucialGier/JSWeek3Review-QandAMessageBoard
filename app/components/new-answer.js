@@ -10,6 +10,8 @@ export default Ember.Component.extend({
       var params = {
         answer: this.get('answer'),
         author2: this.get('author2'),
+        upVotes: 0,
+        downVotes: 0,
         question: this.get('currentQuestion')
       };
       this.set('addNewAnswer', false);

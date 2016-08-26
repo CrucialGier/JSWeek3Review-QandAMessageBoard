@@ -33,6 +33,16 @@ export default Ember.Component.extend({
     newAnswer(params) {
       console.log(params);
       this.sendAction('newAnswer', params);
+    },
+    upVote(answer) {
+      var currentUpVotes = answer.get('upVotes');
+      answer.set('upVotes', currentUpVotes + 1);
+      answer.save();
+    },
+    downVote(answer) {
+      var currentDownVotes = answer.get('downVotes');
+      answer.set('downVotes', currentDownVotes + 1);
+      answer.save();
     }
   }
 });

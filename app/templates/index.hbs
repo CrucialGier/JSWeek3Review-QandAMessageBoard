@@ -1,3 +1,8 @@
+{{#if isInverted}}
+<img {{action 'dayMode'}} class="invertButton" src="img/closed-eye.png">
+{{else}}
+<img {{action 'nightMode'}} class="invertButton" src="img/open-eye.png">
+{{/if}}
 {{new-question save2='save3'}}
 {{log model.questions}}
 {{#each model.questions as |currentQuestion|}}
